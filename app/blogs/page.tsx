@@ -141,7 +141,7 @@ export default function BlogsPage() {
 
         .blogs-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
           gap: 2.5rem;
         }
 

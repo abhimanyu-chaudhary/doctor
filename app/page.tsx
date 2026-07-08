@@ -1412,7 +1412,7 @@ export default function Home() {
           }
 
           .hero-canvas-container {
-            height: 350px;
+            height: 320px;
           }
 
           .bio-preview-grid, .social-grid, .home-blogs-grid {
@@ -1423,6 +1423,54 @@ export default function Home() {
           .bio-img-wrapper {
             max-width: 320px;
             margin: 0 auto;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-title {
+            font-size: 2.25rem;
+          }
+
+          .hero-stats {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+
+          .hero-canvas-container {
+            height: 250px;
+          }
+
+          .section-title {
+            font-size: 1.75rem;
+          }
+
+          .ig-feed-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+
+          .carousel-outer-wrapper {
+            gap: 0;
+          }
+
+          .carousel-control {
+            display: none;
+          }
+
+          .video-card-content {
+            padding: 1.25rem;
+          }
+
+          .video-card-content h4 {
+            font-size: 1.1rem;
+          }
+
+          .spec-card, .blog-home-body, .article-card {
+            padding: 1.25rem;
+          }
+
+          .bio-text {
+            padding: 1.5rem;
           }
         }
       `}</style>
