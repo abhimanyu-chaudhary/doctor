@@ -195,19 +195,19 @@ export default function Header() {
           right: 0;
           bottom: 0;
           left: 0;
-          background: rgba(10, 14, 23, 0.96);
-          backdrop-filter: blur(24px);
-          -webkit-backdrop-filter: blur(24px);
+          background: #0a0e17; /* Solid color to prevent transparent overlap leakage */
           z-index: 1000;
           display: flex;
           justify-content: center;
           align-items: center;
           transform: translateX(100%);
-          transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+          visibility: hidden;
+          transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), visibility 0.4s ease;
         }
 
         .mobile-drawer.open {
           transform: translateX(0);
+          visibility: visible;
         }
 
         .mobile-nav-links {
@@ -223,8 +223,24 @@ export default function Header() {
           font-weight: 600;
           color: var(--text-secondary);
           text-decoration: none;
-          transition: var(--transition-fast);
+          opacity: 0;
+          transform: translateX(30px);
+          transition: opacity 0.4s ease, transform 0.4s ease, color 0.2s ease;
         }
+
+        .mobile-drawer.open .mobile-nav-links :global(a) {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        /* Cascade delay timings for mobile navigation links */
+        .mobile-nav-links :global(a:nth-child(1)) { transition-delay: 0.1s; }
+        .mobile-nav-links :global(a:nth-child(2)) { transition-delay: 0.15s; }
+        .mobile-nav-links :global(a:nth-child(3)) { transition-delay: 0.2s; }
+        .mobile-nav-links :global(a:nth-child(4)) { transition-delay: 0.25s; }
+        .mobile-nav-links :global(a:nth-child(5)) { transition-delay: 0.3s; }
+        .mobile-nav-links :global(a:nth-child(6)) { transition-delay: 0.35s; }
+        .mobile-nav-links :global(a:nth-child(7)) { transition-delay: 0.4s; }
 
         .mobile-nav-links :global(a:hover), .mobile-nav-links :global(a.active-link) {
           color: var(--primary);
