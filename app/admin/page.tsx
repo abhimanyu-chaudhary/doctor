@@ -1342,7 +1342,7 @@ export default function AdminDashboard() {
                   <h3>Image Uploader folder</h3>
                   <p className="tab-desc">Upload files to the secure `/images/` directory on your server. Copy the public URLs to paste in the CMS forms.</p>
                   
-                  <div className="uploader-dropzone" onClick={handleSaveProfile}>
+                  <div className="uploader-dropzone" onClick={handleUploadClick}>
                     <input
                       type="file"
                       ref={fileInputRef}
@@ -1352,7 +1352,6 @@ export default function AdminDashboard() {
                     />
                     <button
                       type="button"
-                      onClick={handleUploadClick}
                       disabled={uploadProgress}
                       className="upload-trigger-btn"
                     >
