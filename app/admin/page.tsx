@@ -1340,7 +1340,7 @@ export default function AdminDashboard() {
               {activeTab === "media" && (
                 <div className="tab-card glass-panel">
                   <h3>Image Uploader folder</h3>
-                  <p className="tab-desc">Upload files to the secure `/uploads/` directory on your server. Copy the public URLs to paste in the CMS forms.</p>
+                  <p className="tab-desc">Upload files to the secure `/images/` directory on your server. Copy the public URLs to paste in the CMS forms.</p>
                   
                   <div className="uploader-dropzone" onClick={handleSaveProfile}>
                     <input
@@ -1381,7 +1381,7 @@ export default function AdminDashboard() {
                         </div>
                       ))
                     ) : (
-                      <p className="no-media">No images uploaded to `/uploads/` folder yet.</p>
+                      <p className="no-media">No images uploaded to `/images/` folder yet.</p>
                     )}
                   </div>
                 </div>

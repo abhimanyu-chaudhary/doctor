@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 $dataPath = __DIR__ . '/data.json.php';
-$uploadsDir = __DIR__ . '/uploads';
+$uploadsDir = __DIR__ . '/images';
 
 // Helper to read and decode JSON files with PHP security headers
 function readSecureJson($path) {
@@ -312,7 +312,7 @@ switch ($action) {
 
         if (move_uploaded_file($_FILES['file']['tmp_name'], $targetFile)) {
             // Return relative URL for static deployment
-            $fileUrl = './uploads/' . $filename;
+            $fileUrl = './images/' . $filename;
             echo json_encode(["status" => "success", "url" => $fileUrl]);
         } else {
             http_response_code(500);
@@ -333,7 +333,7 @@ switch ($action) {
                 if (in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), ['png', 'jpg', 'jpeg', 'webp', 'gif'])) {
                     $images[] = [
                         "name" => $file,
-                        "url" => "./uploads/" . $file,
+                        "url" => "./images/" . $file,
                         "time" => filemtime($uploadsDir . '/' . $file)
                     ];
                 }
