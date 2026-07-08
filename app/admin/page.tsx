@@ -1897,6 +1897,114 @@ export default function AdminDashboard() {
           color: #fca5a5;
           border: 1px solid #dc2626;
         }
+
+        @media (max-width: 768px) {
+          .admin-layout-wrapper {
+            flex-direction: column;
+          }
+
+          .admin-sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 1.5rem 1rem;
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          }
+
+          .sidebar-brand {
+            margin-bottom: 1.25rem;
+            text-align: center;
+          }
+
+          .sidebar-nav {
+            flex-direction: row;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          
+          .sidebar-nav::-webkit-scrollbar {
+            display: none;
+          }
+
+          .sidebar-nav button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            flex-shrink: 0;
+            font-size: 0.8rem;
+          }
+
+          .logout-btn {
+            margin-top: 0 !important;
+            margin-left: auto;
+          }
+
+          .sidebar-footer {
+            display: none;
+          }
+
+          .admin-main {
+            padding: 1rem;
+            gap: 1.25rem;
+          }
+
+          .main-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            padding-bottom: 1rem;
+          }
+
+          .main-header h2 {
+            font-size: 1.25rem;
+          }
+
+          .tab-card {
+            padding: 1.25rem;
+          }
+
+          .tab-desc {
+            margin-bottom: 1.5rem;
+          }
+
+          .form-row-2, .form-row-3 {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+          }
+
+          .save-btn {
+            width: 100%;
+            text-align: center;
+            align-self: stretch;
+            justify-content: center;
+          }
+
+          .add-btn {
+            width: 100%;
+            text-align: center;
+          }
+
+          /* Table responsiveness */
+          .admin-table {
+            display: block;
+            overflow-x: auto;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .toast {
+            top: auto;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            left: 1.5rem;
+            text-align: center;
+          }
+        }
       `}</style>
     </div>
   );
