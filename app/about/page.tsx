@@ -10,7 +10,7 @@ const DEFAULT_DOCTOR = {
   title: "Consultant - Surgical Oncology & Robotic Surgery",
   hospital: "Manipal Hospital Old Airport Road, Bangalore",
   experience: "8+ Years",
-  image: "https://www.manipalhospitals.com/oldairportroad/uploads/doctors_photo/dr-devesh-sanjeev-ballal-leading-surgical-oncologist.png",
+  image: "../images/doctor_image.png",
   bio_paragraphs: [
     "Dr. Devesh S. Ballal is a premier surgical oncologist in Old Airport Road, Bangalore, currently practising as a Consultant - Surgical Oncology and Robotic Surgery at Manipal Hospital Old Airport Road. With over 8 years of comprehensive surgical training, including 4 years dedicated to oncology at India's largest cancer centre (Tata Memorial Hospital, Mumbai), Dr. Devesh Ballal brings a wealth of expertise and a strong commitment to patient care.",
     "His surgical acumen spans a diverse range of specialities, including Colorectal, Urological, Head and Neck, Breast, Thoracic, Hepatopancreatobiliary, Gynaecological, Bone, and Soft Tissue Cancers. He is adept in advanced endoscopic, minimally invasive, and robotic surgeries, consistently applying his critical thinking and organizational skills in high-pressure environments.",
